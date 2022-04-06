@@ -89,10 +89,10 @@ public class Application {
         ).send();
 
         String contractAddress = contract.getContractAddress();
-        log.info("Smart contract deployed to address " + contractAddress);
+        log.info("Smart contract deployed to addresses " + contractAddress);
         log.info("View contract at https://rinkeby.etherscan.io/address/" + contractAddress);
 
-        log.info("Value stored in remote smart contract: " + contract.greet().send());
+        log.info("Value stored in remotely smart contract: " + contract.greet().send());
 
         // Lets modify the value in our smart contract
         TransactionReceipt transactionReceipt = contract.newGreeting("Well hello again").send();
